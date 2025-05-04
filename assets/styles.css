@@ -1,0 +1,344 @@
+:root {
+  --bg: #2f3136;
+  --card: #36393f;
+  --card-alt: #40444b;
+  --text: #ffffff;
+  --text-muted: #b9bbbe;
+  --accent: #7289da;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Banner oben */
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: url("banner.jpg") center/cover no-repeat;
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+.profile-card {
+  position: relative; /* wichtig, damit Banner und Avatar relativ dazu positioniert sind */
+  background: var(--card);
+  border-radius: 8px;
+  width: 800px;
+  padding: 16px;
+  margin-top: 80px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.profile-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Banner oben in der Card */
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  border-radius: 8px 8px 0 0;
+  background: url("https://cdn.discordapp.com/banners/850470027026759690/cae2855237d6cfdb9d85eacdf1921099.png?size=4096")
+    center/cover no-repeat;
+  z-index: 0;
+  filter: brightness(0.7);
+}
+
+/* Avatar & Status */
+.avatar-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  margin-top: 80px;
+  margin-left: 16px;
+}
+
+.avatar {
+  border: 4px solid var(--card);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status-online {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  background: #3ba55d;
+  border: 2px solid var(--card);
+  border-radius: 50%;
+}
+.status-offline {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  background: #747f8d;
+  border: 2px solid var(--card);
+  border-radius: 50%;
+}
+.status-idle {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  background: #faa61a;
+  border: 2px solid var(--card);
+  border-radius: 50%;
+}
+.status-dnd {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  background: #f04747;
+  border: 2px solid var(--card);
+  border-radius: 50%;
+}
+.status-invisible {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  background: #747f8d;
+  border: 2px solid var(--card);
+  border-radius: 50%;
+}
+
+/* Edit Button */
+.btn-edit {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--card-alt);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* Name & Meta */
+.name {
+  margin-top: 12px;
+  font-size: 1.6rem;
+}
+.meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.icons {
+  margin-left: 8px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-top: 16px;
+  border-bottom: 1px solid var(--card-alt);
+}
+.tab {
+  flex: 1;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.tab.active {
+  color: var(--text);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Sections */
+.section {
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+.section h3 {
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* Connections Grid */
+.conn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  border-radius: 4px;
+  padding: 16px;
+}
+.conn-card {
+  margin-left: 50px;
+  margin-right: 50px;
+  background: var(--card-alt);
+  padding: 8px;
+  border-radius: 4px;
+  color: var(--text);
+  font-size: 0.85rem;
+  width: 500%;
+  height: 60px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.conn-card:hover {
+  transition: 0.3s ease;
+  color: var(--text);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.conn-card small {
+  display: block;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Skills */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.skill-list li {
+  background: var(--accent);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+/* Projects */
+.project {
+  background: var(--card-alt);
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.project h4 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+.project p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+/* Activity Section */
+.activity-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+.activity-list li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.activity-list a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.activity-list a:hover {
+  text-decoration: underline;
+}
+
+/* Discord Card */
+.page-wrapper {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.presence-body {
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  display: flex;
+  gap: 12px;
+  background: var(--card-alt);
+  align-items: center;
+  max-width: 500px;
+}
+
+.big-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.small-image {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 100px;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 165px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.activity-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.activity-details,
+.activity-state {
+  font-size: 14px;
+  color: #b9bbbe;
+}
+
+.activity-timestamp {
+  font-size: 13px;
+  color: #57f287;
+  font-family: monospace;
+}

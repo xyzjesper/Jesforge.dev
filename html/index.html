@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Jesper • Portfolio</title>
+    <link rel="stylesheet" href="/api/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  </head>
+  <body>
+   
+
+
+    <div class="profile-card">
+        <!-- Banner ganz oben in der Card -->
+        <div class="banner"></div>
+      
+        <!-- Avatar + Status -->
+        <div class="avatar-wrapper">
+          <img class="avatar" src="https://cdn.discordapp.com/avatars/850470027026759690/2b01a11f070f7b02ff63978b942135da.png?size=512" alt="Avatar" />
+          <div id="status" class="status"></div>
+        </div>
+          
+
+      <!-- Name + Username + Role + Icons -->
+      <h1 class="name">Jesper</h1>
+      <p class="meta">
+        jesforge • he/him – Developer
+      </p>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" onclick="showSection('about')">
+          About Me
+        </button>
+        <button class="tab" onclick="showSection('activity')">Activity</button>
+      </div>
+
+      <!-- About Me Content -->
+      <div id="about" class="section about ml-4 mr-4 mt-4 mb-4">
+        <h3><strong>Working</strong></h3>
+        <p class="inline-flex items-center text-sm text-gray-500 dark:text-gray-400"> 
+            <p class="inline-flex items-center text-sm text-gray-500 dark:text-gray-400">
+            <img src="/api/img/work/nexo.webp" alt="jesforge" class="jesforge-icon" width="20" height="20" />
+            <a class=" ml-2 mr-2" style="margin-left: 5px;" href="https://nexocrew.com/">NexoCrew</a>
+          </p>
+          <p class="inline-flex items-center text-sm text-gray-500 dark:text-gray-400">
+            <img src="/api/img/work/moonlight.webp" alt="jesforge" class="jesforge-icon" width="20" height="20" />
+            <a class=" ml-2 mr-2" style="margin-left: 5px;" href="https://moonlightpanel.xyz/">Moonlight Panel</a>
+          </p>
+          <p class="inline-flex items-center text-sm text-gray-500 dark:text-gray-400">
+            <img src="/api/img/work/disbot.webp" alt="jesforge" class="rounded-full" width="20" height="20" />
+            <a class=" ml-2 mr-2" style="margin-left: 5px;" href="https://moonlightpanel.xyz/">DisBot</a>
+          </p>
+          <p class="inline-flex items-center text-sm text-gray-500 dark:text-gray-400">
+                <img src="/api/img/work/crystopia.webp" alt="jesforge" class="jesforge-icon" width="20" height="20" />
+                <a class=" ml-2 mr-2" style="margin-left: 5px;" href="https://moonlightpanel.xyz/">Crystopia</a>
+          </p>
+          <br />
+        </p>
+        <p><strong>Member Since:</strong> 4 Jun 2021</p>
+      </div>
+
+      <!-- Activity -->
+      <div id="activity" class="section activity" style="display: none">
+        <h3>Activity</h3>
+        <div id="discord-presence" class="discord-card">
+      </div>      
+        <div class="text-center text-sm text-gray-500 dark:text-gray-400 font-bold" style="margin-left: 5px; display: flex; justify-content: center; align-items: center; margin-top: 10px;">
+            <img src="https://github-readme-stats.vercel.app/api?username=jesforge&show_icons=true&theme=transparent&hide_border=true" height="150" alt="stats graph"  />
+        </div> 
+        <div class="text-center text-sm text-gray-500 dark:text-gray-400 font-bold" style="margin-left: 5px; display: flex; justify-content: center; align-items: center; margin-top: 10px;">
+            <img src="https://github-readme-stats.vercel.app/api/top-langs?username=jesforge&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=transparent&hide_border=true&order=2" height="150" alt="languages graph"  />
+        </div>
+        <a class="text-center text-sm text-gray-500 dark:text-gray-400 font-bold" style="margin-left: 5px; display: flex; justify-content: center; align-items: center; margin-top: 10px;"
+        href="https://open.spotify.com/user/31k64mqzth4f6idezgkczvueqqf4">
+            <img src="https://spotify-recently-played-readme.vercel.app/api?user=31k64mqzth4f6idezgkczvueqqf4&count=5" alt="Spotify recently played"  />
+          </a>
+      </div>
+
+      <!-- Connections -->
+      <div class="section connections">
+        <h3>Connections</h3>
+        <div class="conn-grid">
+            <p class="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 font-bold">
+                <a href="https://discord.com/users/850470027026759690" class="inline-flex items-center gap-2 conn-card">
+                    <img src="/api/img/connections/discord.png" alt="jesforge" class="jesforge-icon" width="20" height="20" />
+                    Discord
+                </a>
+            </p>
+            <p class="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 font-bold">
+                <a href="https://youtube.com/@jesforge" class="inline-flex items-center gap-2 conn-card">
+                    <img src="/api/img/connections/youtube.png" alt="jesforge" class="jesforge-icon" width="20" height="20" />
+                    YouTube
+                </a>
+            </p>
+            <p class="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 font-bold">
+                <a href="https://www.linkedin.com/in/jesper-richert-372721363/" class="inline-flex items-center gap-2 conn-card">
+                    <img src="/api/img/connections/linkedin.png" alt="jesforge" class="jesforge-icon" width="20" height="20" />
+                    LinkedIn
+                </a>
+            </p>
+            <p class="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 font-bold">
+                <a href="https://github.com/jesforge" class="inline-flex items-center gap-2 conn-card">
+                    <img src="/api/img/connections/github.png" alt="jesforge" class="jesforge-icon" width="20" height="20" />
+                    GitHub
+                </a>
+            </p>
+            <p class="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 font-bold">
+                <a href="https://twitch.tv/jesforge" class="inline-flex items-center gap-2 conn-card">
+                    <img src="/api/img/connections/twitch.png" alt="jesforge" class="jesforge-icon" width="20" height="20" />
+                    Twitch
+                </a>
+            </p>
+            <p class="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 font-bold">
+                <a href="https://www.instagram.com/_jesforge" class="inline-flex items-center gap-2 conn-card">
+                    <img src="/api/img/connections/instagram.png" alt="jesforge" class="jesforge-icon" width="20" height="20" />
+                    Instagram
+                </a>
+            </p>
+        </div>        
+      </div>
+
+      <!-- Skills -->
+      <div class="section skills">
+        <h3>Skills</h3>
+        <ul class="skill-list">
+          <li>
+            <i class="devicon-kotlin-plain colored"></i>
+           Kotlin</li>
+          <li>
+            <i class="devicon-csharp-plain colored"></i>
+           C#</li>
+          <li>
+            <i class="devicon-nextjs-plain"></i>
+           Next.js</li>
+          <li>
+            <i class="devicon-discordjs-plain"></i>
+           Discord.js</li>
+            <li>
+                <i class="devicon-react-original-wordmark colored"></i>
+              React</li>
+            <li>
+                <i class="devicon-java-plain colored"></i>
+               Java</li>
+            <li>
+                <i class="devicon-html5-plain-wordmark colored"></i>
+               HTML</li>
+            <li>
+                <i class="devicon-css3-plain colored"></i>
+              CSS</li>
+            <li>
+                <i class="devicon-javascript-plain colored"></i>
+               JavaScript</li>
+            <li>
+                <i class="devicon-typescript-plain colored"></i>
+            TypeScript</li>
+            <li>
+                <i class="devicon-php-plain colored"></i>
+               PHP</li>
+            <li>
+                <i class="devicon-python-plain"></i> Python</li>
+            <li><i class="devicon-express-original-wordmark colored"></i> Express.js</li>
+            <li><i class="devicon-blazor-original colored"></i> Blazor</li>
+            <li>
+                <i class="devicon-postgresql-plain-wordmark colored"></i>
+                PostgreSQL</li>    
+        <li>
+            <i class="devicon-mysql-plain-wordmark colored"></i>
+            MySQL</li>
+          <li>
+            <i class="devicon-mongodb-plain-wordmark colored"></i>
+            MongoDB</li>
+          <li>
+            <i class="devicon-git-plain colored"></i>
+            Git</li>
+          <li>
+            <i class="devicon-linux-plain colored"></i>
+            Linux</li>
+          <li>
+            <i class="devicon-docker-plain colored"></i>
+            Docker</li>
+            <li>
+            <i class="devicon-tailwindcss-original colored"></i>
+            Tailwind CSS</li>
+            </li>
+            <li>
+            <i class="devicon-laravel-original colored"></i>
+            Laravel
+            </li>
+            <li>
+                
+            <i class="devicon-portainer-original colored"></i>
+            Portainer
+            </li>
+            <li>
+            <i class="devicon-phpstorm-plain colored"></i>
+            PhpStorm
+            </li>
+            <li>
+                <i class="devicon-rider-plain"></i> Rider
+            </li>
+            <li>
+            <i class="devicon-intellij-plain"></i>
+            IntelliJ IDEA
+            </li>
+        </ul>
+      </div>
+
+      <!-- Projects -->
+      <div class="section projects">
+        <h3>Projects</h3>
+        <p class="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 font-bold">
+            ❗ <a class="ml-2 mr-2" style="margin-left: 5px;" href="https://github.com/jesforge">You can find more on Github</a>
+        </p>
+        <br /><br />
+        <input type="text" id="search" placeholder="Search for projects..." class="search-input" oninput="filterProjects()" />
+
+        <br /><br /><br />
+        <div id="projects-list">
+        
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showSection(section) {
+        if (section === "about") {
+          window.location.reload();
+        }
+        document.querySelectorAll(".section").forEach(function (el) {
+          el.style.display = "none";
+        });
+
+        document.getElementById(section).style.display = "block";
+        document.querySelectorAll(".tab").forEach(function (tab) {
+          tab.classList.remove("active");
+        });
+        document
+          .querySelector(`button[onclick="showSection('${section}')"]`)
+          .classList.add("active");
+      }
+
+
+      async function filterProjects() {
+    const searchInput = document.getElementById("search").value.toLowerCase();
+    const projects = document.querySelectorAll("#projects-list p");
+    projects.forEach(project => {
+      const projectName = project.innerText.toLowerCase();
+      project.className = "inline-flex items-center text-sm text-gray-500 dark:text-gray-400 font-bold";
+      project.style.display = projectName.includes(searchInput) ? "flex" : "none";
+    });
+  }
+  // Ruft filterProjects bei jeder Eingabeänderung auf
+  document.getElementById("search").addEventListener("input", filterProjects);
+
+    const username = [
+       "jesforge",
+       "nexocrew-HQ",
+       "Crystopia",
+       "DisBotDevelopment",
+    ];
+
+  const list = document.getElementById("projects-list");
+   list.innerHTML = ""; // Clear the list before adding new items
+    username.forEach(user => {
+        fetch(`/api/github/${user}`)
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(repo => {
+                    if (!repo.fork && !repo.archived && !repo.name.startsWith(".")) {
+                      const listItem = document.createElement("p");
+                        listItem.className = "inline-flex items-center text-sm text-gray-500 dark:text-gray-400 font-bold";
+                        listItem.innerHTML = `
+                            <img src="/api/img/connections/github.png" alt="jesforge" class="jesforge-icon" width="20" height="20" />
+                            <a class="ml-2 mr-2" style="margin-left: 5px; margin-right: 5px;" href="${repo.html_url}">${repo.name}</a>
+                        `;
+                        list.appendChild(listItem);
+                    }
+                });
+            })
+            .catch(error => 
+                list.innerHTML = `<p class="text-red-500 font-bold items-center text-sm text-gray-500 dark:text-gray-400" syle="margin-left: 5px; display: flex; justify-content: center; align-items: center; margin-top: 10px;">
+                       Please use the GitHub page to see the projects. 
+                    </p><br />`
+            
+            );
+    });
+
+    async function fetchDiscordPresence() {
+    const discordPresence = document.getElementById("discord-presence");
+
+    try {
+        const response = await fetch("/api/discord/presence");
+        if (!response.ok) throw new Error("Failed to fetch presence data");
+
+        const data = await response.json();
+        const activity = data.status.activities[0];
+
+        const bigImage = `https://cdn.discordapp.com/app-assets/${activity.applicationId}/${activity.assets.largeImage}.png`;
+        const smallImage = `https://cdn.discordapp.com/app-assets/${activity.applicationId}/${activity.assets.smallImage}.png`;
+        const start = activity.timestamps?.start;
+        const duration = start ? formatDuration(Date.now() - start) : null;
+
+        discordPresence.innerHTML = `
+       <div class="page-wrapper">
+    <div class="presence-body">
+        <img src="${bigImage}" alt="Big Image" class="big-image" />
+          <img src="${smallImage}" alt="Small Image" class="small-image" />
+        <div class="details">
+            <div class="activity-name">${activity.name}</div>
+            <div class="activity-details">${activity.details}</div>
+            <div class="activity-state">${activity.state}</div>
+            ${duration ? `<div class="activity-timestamp">${duration}</div>` : ""}
+        </div>
+    </div>
+</div>
+        `;
+    } catch (error) {
+        console.error("Fehler beim Laden:", error);
+        discordPresence.innerHTML = "<p>Fehler beim Laden der Präsenzdaten.</p>";
+    }
+}
+
+function formatDuration(ms) {
+    const totalSeconds = Math.floor(ms / 1000);
+    const hours = String(Math.floor(totalSeconds / 3600)).padStart(1, '0');
+    const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+    const seconds = String(totalSeconds % 60).padStart(2, '0');
+    return `🕒 ${hours}:${minutes}:${seconds}`;
+}
+
+fetchDiscordPresence();
+
+    async function fetchDiscordStatus() {
+    const user = await fetch("/api/discord")
+    const status = document.getElementById("status");
+ 
+    const userData = await user.json();
+
+    if (userData.status == "online") {
+        status.classList.add("status-online");
+    } else if (userData.status == "dnd") {
+        status.classList.add("status-dnd");
+    } else if (userData.status == "idle") {
+        status.classList.add("status-idle");
+    } else {
+        status.classList.add("status-offline");
+    }
+  }
+  fetchDiscordStatus();
+    </script>
+  </body>
+</html>
