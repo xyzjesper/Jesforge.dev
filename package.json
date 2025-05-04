@@ -1,0 +1,24 @@
+{
+  "name": "jesforge.dev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesforge/Jesforge.dev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesforge/Jesforge.dev/issues"
+  },
+  "homepage": "https://github.com/jesforge/Jesforge.dev#readme",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "discord.js": "^14.19.3",
+    "express": "^5.1.0"
+  }
+}
