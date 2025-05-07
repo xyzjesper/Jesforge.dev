@@ -14,7 +14,8 @@
 }
 
 body {
-  background: var(--bg);
+  background: url("/api/img/background.png") no-repeat center center fixed;
+  background-size: cover;  
   color: var(--text);
   font-family: "Segoe UI", sans-serif;
   display: flex;
