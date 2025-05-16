@@ -48,5 +48,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/jesforge/jesforge.dev:${{ github.run_number }}
-            ghcr.io/jesforge/jesforge.dev:latest
+            ghcr.io/xyzjesper/xyzjesper.dev:${{ github.run_number }}
+            ghcr.io/xyzjesper/xyzjesper.dev:latest
