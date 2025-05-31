@@ -1,0 +1,106 @@
+export const techStack = [{
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+    name: "TypeScript",
+    link: "https://www.typescriptlang.org/",
+    color: "#3178C6"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+    name: "JavaScript",
+    link: "https://www.javascript.com",
+    color: "#F7DF1E"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
+    name: "C# (Learning)",
+    link: "https://dotnet.microsoft.com/",
+    color: "#512BD4"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+    name: "Next.js",
+    link: "https://nextjs.org/",
+    color: "#FFFFFF"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg",
+    name: "Svelte",
+    link: "http://svelte.dev/",
+    color: "#FF3E00"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg",
+    name: "React",
+    link: "https://react.dev/",
+    color: "#61DAFB"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg",
+    name: "Kotlin",
+    link: "http://kotlinlang.org/",
+    color: "#e10cc4"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+    name: "Docker",
+    link: "http://docker.com/",
+    color: "#1D63ED"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    name: "Tailwindcss",
+    link: "https://tailwindcss.com/",
+    color: "#a5f3fc"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg",
+    name: "MongoDB",
+    link: "https://mongoDB.com/",
+    color: "#4DB33D"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg",
+    name: "PostgreSQL",
+    link: "https://www.postgresql.org",
+    color: "#336791"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
+    name: "Go (Learning)",
+    link: "https://go.dev/",
+    color: "#00ADD8"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+    name: "Python (Basic +)",
+    link: "https://python.org/",
+    color: "#3572A5"
+}, {
+    iconUrl: "https://eurorust.eu/images/rust-logo.png",
+    name: "Rust (Learning)",
+    link: "https://www.rust-lang.org/",
+    color: "#dea584"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/discordjs/discordjs-original.svg",
+    name: "Discord.js",
+    link: "https://discord.js.org",
+    color: "#7289da"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    name: "Java",
+    link: "https://java.com",
+    color: "#f89820"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
+    name: "Laravel (Basic)",
+    link: "https://laravel.com/",
+    color: "#F05340"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg",
+    name: "Git",
+    link: "https://git-scm.com",
+    color: "#f14e32"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+    name: "Linux",
+    link: "http://debian.org/",
+    color: "#ffcc33"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg",
+    name: "Bun",
+    link: "https://bun.sh/",
+    color: "#e2bd8c"
+}, {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetbrains/jetbrains-original.svg",
+    name: "Jetbrains",
+    link: "https://jetbrains.com/",
+    color: "#FE2C6E"
+}]

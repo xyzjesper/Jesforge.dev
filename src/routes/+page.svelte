@@ -1,9 +1,12 @@
 <script lang="ts">
+    import {techStack} from "$lib/techStack.js";
     import {onMount} from "svelte";
 
     export let data;
 
+    let techStackData = techStack
     let repos: any[] = [];
+    let organizations: any[] = [];
     let languageStats: Record<string, number> = {};
     let loading = true;
 
@@ -37,13 +40,18 @@
         Assembly: "#6E4C13",
         CoffeeScript: "#244776",
         FSharp: "#b845fc",
+        Laravel: "#F05340",
         Nim: "#f3d400",
         OCaml: "#3be133",
         Crystal: "#000100",
         V: "#5d87bf",
         Zig: "#ec915c",
         Nix: "#7e7eff",
-        default: "#7289da"
+        Jetbrains: "#FE2C6E",
+        Bun: "#e2bd8c",
+        Git: "",
+        Linux: "#ffcc33",
+        default: "#7289da",
     };
 
     $: if (!loading && repos.length > 0) {
@@ -85,6 +93,10 @@
             .sort((a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime())
             .reverse();
 
+        const seen = new Set();
+        organizations = data.orgResult
+
+
         loading = false;
     });
 </script>
@@ -100,22 +112,37 @@
 </div>
 
 <div class="glass-card about">
-    <strong>About me</strong>
-    <p>
-        I'm Jesper – fullstack developer with a focus on modern web technologies, backend architecture and
-        community projects. Whether Discord bots, panels, APIs, games or complex web apps: I focus on quality,
-        clean code and teamwork.
-    </p>
-    <p class="highlight">
-        Currently active at <b><a class="active-projects" href="https://crystopia.net">Crystopia</a></b>, <b><a
-            class="active-projects" href="https://disbot.xyz">DisBot</a></b>, <b><a class="active-projects"
-                                                                                    href="https://moonlightpanel.xyz">Moonlight
-        Panel</a></b>
-        and <b><a class="active-projects" href="https://index-hosting.com">Index-Hosting</a></b>.
-        Always
-        open to exciting projects!
-    </p>
+    I'm Jesper – fullstack developer with a focus on modern web technologies, backend architecture and
+    community projects. Whether Discord bots, panels, APIs, games, CLI's or complex web apps: I focus on quality,
 </div>
+
+<section class="section">
+    <div class="section-header">
+        <h2>Teams I'm in</h2>
+        <p class="section-subtitle">Teams I'm working for</p>
+    </div>
+
+    <div>
+        {#if organizations.length === 0}
+            <p>No Organisation found.</p>
+        {:else}
+            <div class="org-grid">
+                {#each organizations as org}
+                    <a href={`https://github.com/${org.login}`} target="_blank">
+                        <div class="flex justify-center items-center flex-wrap gap-4">
+                            <div class="org-card w-100 h-40 rounded-xl flex flex-col items-center justify-center text-center p-4">
+                                <img src={org.avatar_url} alt="" class="org-avatar w-20 h-20 rounded-full mb-4"/>
+                                <div class="org-name text-lg font-semibold text-white">{org.login}</div>
+                            </div>
+                        </div>
+                    </a>
+                {/each}
+            </div>
+        {/if}
+    </div>
+
+</section>
+
 
 <section class="section">
     <div class="section-header">
@@ -124,16 +151,18 @@
     </div>
 
     <div class="tech-grid">
-        {#each Object.entries(languageStats).sort((a, b) => b[1] - a[1]) as [lang, count]}
-            <div class="tech-card" style="--lang-color:{langColors[lang] || langColors.default}">
-                <div class="tech-icon">
-                    <div class="tech-dot"></div>
+        {#each techStackData as techStackData}
+            <a href={techStackData.link}>
+                <div class="tech-card hover:text-black"
+                     style="--lang-color:{techStackData.color}">
+                    <div class="tech-icon">
+                        <img src={techStackData.iconUrl} alt={techStackData.name} width="100" height="100"/>
+                    </div>
+                    <div class="tech-info">
+                        <h3>{techStackData.name}</h3>
+                    </div>
                 </div>
-                <div class="tech-info">
-                    <h3>{lang}</h3>
-                    <p>{count} {count === 1 ? 'Project' : 'Projects'}</p>
-                </div>
-            </div>
+            </a>
         {/each}
     </div>
 </section>
@@ -326,10 +355,8 @@
     }
 
     .glass-card {
-        background: var(--card-bg);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
-        border: 1px solid var(--border);
         border-radius: 16px;
         padding: 2rem;
         max-width: 800px;
@@ -341,7 +368,6 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        background: radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
     }
 
     .about strong {
@@ -359,6 +385,43 @@
         border-radius: 8px;
         border-left: 3px solid var(--accent);
         margin-top: 1rem;
+    }
+
+    .org-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .org-card {
+        background: var(--bg-light);
+        border: 1px solid var(--border);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 12px;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease;
+    }
+
+    .org-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .org-avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 0.5rem;
+    }
+
+    .org-name {
+        font-weight: bold;
+        font-size: 1rem;
+        word-break: break-word;
     }
 
     .section {
@@ -384,50 +447,30 @@
 
     .tech-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 5fr));
+        gap: 0.5rem;
     }
 
     .tech-card {
         background: var(--bg-light);
         border-radius: 12px;
         padding: 1.5rem;
+        width: 150px;
+        height: 200px;
         transition: all 0.3s ease;
         border: 1px solid var(--border);
     }
 
     .tech-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         border-color: rgba(99, 102, 241, 0.3);
-    }
-
-    .tech-icon {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1rem;
-        background: rgba(255, 255, 255, 0.05);
-    }
-
-    .tech-dot {
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
         background: var(--lang-color);
         box-shadow: 0 0 10px var(--lang-color);
     }
 
     .tech-info h3 {
         margin-bottom: 0.25rem;
-    }
-
-    .tech-info p {
-        color: var(--text-muted);
-        font-size: 0.9rem;
+        text-align: center;
     }
 
     .projects-grid {
@@ -619,10 +662,6 @@
 
         .projects-grid {
             grid-template-columns: 1fr;
-        }
-
-        .glass-card {
-            padding: 1.5rem;
         }
     }
 
