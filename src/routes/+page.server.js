@@ -1,12 +1,12 @@
-import {GITHUB_AUTH_TOKEN} from '$env/static/private';
-
 export async function load() {
     const users = ["xyzjesper", "nexocrew-HQ", "Crystopia", "DisBotDevelopment", "xyzspace-dev", "DevelopmentStorage"];
     const allRepos = [];
 
+    let token = process.env.GITHUB_AUTH_TOKEN
+
     const orgs = await fetch("https://api.github.com/users/xyzjesper/orgs ", {
         headers: {
-            Authorization: `Bearer ${GITHUB_AUTH_TOKEN}`
+            Authorization: `Bearer ${token}`
         }
     })
     const orgResult = await orgs.json()
@@ -14,7 +14,7 @@ export async function load() {
     for (const user of users) {
         const res = await fetch(`https://api.github.com/search/repositories?q=user:${user}`, {
             headers: {
-                Authorization: `Bearer ${GITHUB_AUTH_TOKEN}`
+                Authorization: `Bearer ${token}`
             }
         });
 
