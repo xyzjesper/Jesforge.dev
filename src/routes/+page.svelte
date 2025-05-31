@@ -222,7 +222,7 @@
         </div>
 
         <div class="pagination">
-            <button on:click={prevPage} disabled={currentPage === 1} class="pagination-button">
+            <button on:click={prevPage} disabled={currentPage === 1} class="pagination-button" aria-label="true">
                 <svg viewBox="0 0 24 24">
                     <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
                 </svg>
@@ -232,7 +232,8 @@
                     {i + 1}
                 </button>
             {/each}
-            <button on:click={nextPage} disabled={currentPage === totalPages} class="pagination-button">
+            <button on:click={nextPage} disabled={currentPage === totalPages} class="pagination-button"
+                    aria-label="true">
                 <svg viewBox="0 0 24 24">
                     <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
                 </svg>
@@ -249,12 +250,6 @@
         font-weight: 400;
         font-display: swap;
         src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-    }
-
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
     }
 
     .hero {
