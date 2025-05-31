@@ -370,23 +370,6 @@
         gap: 1rem;
     }
 
-    .about strong {
-        font-size: 1.1rem;
-        color: var(--primary-light);
-    }
-
-    .about p {
-        color: var(--text-muted);
-    }
-
-    .highlight {
-        background: radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
-        padding: 1rem;
-        border-radius: 8px;
-        border-left: 3px solid var(--accent);
-        margin-top: 1rem;
-    }
-
     .org-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -438,11 +421,6 @@
     .section-subtitle {
         color: var(--text-muted);
         font-size: 1.1rem;
-    }
-
-    .active-projects {
-        color: var(--accent);
-        font-weight: bold;
     }
 
     .tech-grid {
