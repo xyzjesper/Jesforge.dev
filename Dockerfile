@@ -1,8 +1,8 @@
 FROM oven/bun:slim
 
-COPY . .
+ENV GITHUB_AUTH_TOKEN=0
 
-ENV GITHUB_AUTH_TOKEN=${GITHUB_AUTH_TOKEN}
+COPY . .
 
 RUN bun install
 RUN bun run build
