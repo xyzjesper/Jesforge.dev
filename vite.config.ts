@@ -5,6 +5,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
 	plugins: [sveltekit(), tailwindcss()],
 	preview: {
-	    allowedHosts: ["xyzjesper.dev", "jesforge.dev", "."]
+	   allowedHosts: 'all'
 	}
 });
