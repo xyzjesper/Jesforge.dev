@@ -60,7 +60,7 @@ export const techStack = [{
     color: "#00ADD8"
 }, {
     iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-    name: "Python (Basic +)",
+    name: "Python",
     link: "https://python.org/",
     color: "#3572A5"
 }, {

@@ -4,6 +4,8 @@ export async function load() {
 
     let token = process.env.GITHUB_AUTH_TOKEN
 
+    console.log("GITHUB_AUTH_TOKEN", token);
+
     const orgs = await fetch("https://api.github.com/users/xyzjesper/orgs ", {
         headers: {
             Authorization: `Bearer ${token}`
